@@ -36,13 +36,30 @@ on a part time basis. If you're in need of assistance, I would like to help.
 
 ## I provide care
 
-I cam capable of providing care to children. I have the following qualifications:
+> I have a few spare hours here and there that I would love to use to help others.
+
+> I am qualified and have the appropriate experience to provide care.
+
+> I am willing to submit to a criminal background check.
+
+If you're interested in joining our group of expert advisors and care givers, this is what you can expect.
+
+When you register with our program we will ask you a series of questions to help us understand
+what type of care you're able to provide. If you're a match, one of our existing advisors will
+connect with you for a face to face conversation to see if we're able to provide you with the opportunities
+that you seek and to ensure that you meet the criteria specified in our advisor qualifications.
+
+Once you're approved, you'll be able to specify hours of availability and we'll start to search
+for opportunities to put your talent to use. If a guardian is interested in you, we'll arrange a way
+for you and the guardian to connect so that you can begin helping a child in need.
+
+I am capable of providing care to children. I have the following qualifications:
 
 * [ ] first aid
 * [ ] x
 * [ ] y
 
-[Sign me up](#)
+[I would like to apply](#)
 
 ## I need care
 
