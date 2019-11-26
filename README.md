@@ -34,4 +34,18 @@ I have completed the following certifications:
 I live in NW Calgary and I'm looking for opportunities to work near my home and with children
 on a part time basis. If you're in need of assistance, I would like to help.
 
+## I provide care
+
+I cam capable of providing care to children. I have the following qualifications:
+
+* [ ] first aid
+* [ ] x
+* [ ] y
+
+[Sign me up](#)
+
 ## I need care
+
+I am interested in learning more about arranging care for my child.
+
+[Learn more](#)
