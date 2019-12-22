@@ -8,43 +8,23 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
   <body>
-    <section class="hero">
 
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            EasyFind.Care
-          </h1>
-          <h2 class="subtitle">
-            Uber for special needs childcare
-          </h2>
-        </div>
-      </div>
-    </section>
+    <div class="main-carousel" style="min-height: 650px;">
 
-
-    <div class="main-carousel" style="min-height: 270px;">
-
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
+      <div class="carousel-cell" style="width: 330px;">
+        <img src="/assets/book.png"/>
       </div>
 
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
+      <div class="carousel-cell" style="width: 330px;">
+        <img src="/assets/book.png"/>
       </div>
 
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
+      <div class="carousel-cell" style="width: 330px;">
+        <img src="/assets/book.png"/>
       </div>
 
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
-      </div>
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
-      </div>
-      <div class="carousel-cell">
-        <iframe src="book.html"></iframe>
+      <div class="carousel-cell" style="width: 330px;">
+        <img src="/assets/book.png"/>
       </div>
 
     </div>
@@ -67,7 +47,8 @@
         new Flickity( elem, {
           // options
           cellAlign: 'left',
-          contain: true
+          contain: true,
+          prevNextButtons: false
         });
 
       })();
