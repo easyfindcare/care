@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
   <body>
     <section class="hero">
@@ -22,39 +22,58 @@
       </div>
     </section>
 
-    <div class="container">
 
+    <div class="main-carousel" style="min-height: 270px;">
 
-      <div class="columns">
-        <div class="column">
-          <iframe src="book.html"></iframe>
-        </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
+      </div>
 
-        <div class="column">
-          <iframe src="book.html"></iframe>
-        </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
+      </div>
 
-        <div class="column">
-          <iframe src="book.html"></iframe>
-        </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
+      </div>
 
-        <div class="column">
-          <iframe src="book.html"></iframe>
-        </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
+      </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
+      </div>
+      <div class="carousel-cell">
+        <iframe src="book.html"></iframe>
       </div>
 
     </div>
 
-
-    <div class="container">
+    <div class="container" style="margin-top: 30px;">
       <div class="columns">
-        <div class="column">&nbsp;</div>
         <div class="column">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKZ-Chb7hSfR5gi684j4udHfjVK__5smwDpCBtLvRVEELCDg/viewform?embedded=true" width="640" height="461" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKZ-Chb7hSfR5gi684j4udHfjVK__5smwDpCBtLvRVEELCDg/viewform?embedded=true" width="375" height="350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
-        <div class="column">&nbsp;</div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+
+       (function(){
+
+        let elem = document.querySelector('.main-carousel');
+        new Flickity( elem, {
+          // options
+          cellAlign: 'left',
+          contain: true
+        });
+
+      })();
+
+   </script>
+
   </body>
 
 
