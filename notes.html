@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" type="text/css" media="screen">
   </head>
   <body>
-    <div class="container">
       <div class="columns">
         <div class="column">
           <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="">
-                <h1 class=title>&lt; Settings</h1>
+                <h1 class=title>&lt; Session Notes</h1>
               </a>
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -26,23 +25,36 @@
         </div>
       </div>
       <div class="columns">
+
         <div class="column">
           <figure class="image is-128x128" style='margin: 0 auto;'>
             <img class="is-rounded" src="/assets/jocelyn.jpg">
           </figure>
-          <p style='text-align: center;'> Monday 3-4 PM with <strong>Jocelyn</strong> </p>
+          <p style='text-align: center;'>
+            Monday 3-4 PM with <strong>Jocelyn, SLP</strong>
+            <span class="tag is-link is-normal">4.5/5</span>
+          </p>
         </div>
-        <div class=column> &nbsp; </div>
       </div>
 
-      <div class="columns is-mobile">
-        <div class="column">
-          <img class='image' src="/assets/playground.jpg" />
-        </div>
-        <div class="column">
-          <img class='image'  src="/assets/playground-2.jpg" />
-        </div>
+      <div style="text-align: center;">
+        <img style="height: 149px; width: 200px" src="/assets/playground-2.jpg">
       </div>
+
+      <p class="notification">
+        <strong>Jocelyn</strong>: Brody learned to use his words with his peers at the playground today.
+      </p>
+
+      <div class="field">
+        <div class="control">
+          <div class="control">
+            <textarea class="textarea" placeholder="Add a Comment" rows="2"></textarea>
+          </div>
+        </div>
+
+        <button class="button is-large is-fullwidth is-primary">Submit</button>
+      </div>
+
     </div>
   </body>
 </html>
