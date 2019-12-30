@@ -15,43 +15,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
-  <body>
-    <div class="main-carousel" style="min-height: 550px;">
-      <div class="carousel-cell box">
-        <img src="/assets/book.png" class='image' />
-      </div>
-
-      <div class="carousel-cell box" style="width: 375px;">
-        <img src="/assets/confirm.png" class='image' />
-      </div>
-
-      <div class="carousel-cell box" style="width: 375px;">
-        <img src="/assets/notes.png" class='image' />
-      </div>
-
-      <div class="carousel-cell box" style="width: 375px;">
-        <img src="/assets/settings.png" class='image' />
+  <body style="width: 80%; margin: 0 auto;">
+    <div class="container">
+      <div class="columns">
+        <div class="column" style='text-align: center;'>
+          <p> Lorem Ipsum is simply dummy text of the printing. </p>
+          <p> It has survived not only five centuries, but also the. </p>
+          <p> It was popularised in the 1960s with the release of. </p>
+        </div>
       </div>
     </div>
-
-    <div class="container" style="margin-top: 30px;">
+    <div class="container is-hidden-desktop">
+      <div class="columns">
+        <div class="column" style='text-align: center;'>
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTNfeJi1seJT9ZkYP3TqRyNwulU7Xp5t71nMfEM1qwHlCi3JUnISlimcHxEVwLb_kYqMKA_E73JLujp/embed?start=true&loop=true&delayms=2000" frameborder="0" width="261" height="509" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-hidden-mobile">
+      <div class="column">
+        <img class="image" src="/assets/book.png" />
+      </div>
+      <div class="column">
+        <img class="image" src="/assets/confirm.png" />
+      </div>
+      <div class="column">
+        <img class="image" src="/assets/notes.png" />
+      </div>
+      <div class="column">
+        <img class="image" src="/assets/settings.png" />
+      </div>
+    </div>
+    <div class="column" style='text-align: center;'>
       <div class="columns">
         <div class="column">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKZ-Chb7hSfR5gi684j4udHfjVK__5smwDpCBtLvRVEELCDg/viewform?embedded=true" width="375" height="350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
       </div>
     </div>
-
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script>
-      (function(){
-        let elem = document.querySelector('.main-carousel');
-        new Flickity( elem, {
-          cellAlign: 'left',
-          contain: true,
-          prevNextButtons: false
-        });
-      })();
-    </script>
   </body>
 </html>
