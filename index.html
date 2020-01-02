@@ -14,6 +14,66 @@
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+    <script charset="utf-8">
+      (() => {
+        const application = Stimulus.Application.start();
+        application.register('slideshow', class extends Stimulus.Controller {
+          static get targets() {
+            return ["next", "previous", "slide"];
+          }
+
+          initialize() {
+            this.showCurrentSlide();
+          }
+
+          get index() {
+            return parseInt(this.data.get('index'));
+          }
+
+          set index(value) {
+            this.data.set("index", value);
+            this.showCurrentSlide();
+          }
+
+          get totalSlides() {
+            return this.slideTargets.length;
+          }
+
+          next() {
+            this.index++;
+          }
+
+          previous() {
+            this.index--;
+          }
+
+          showCurrentSlide() {
+            this.slideTargets.forEach((element, i) => {
+              element.classList.toggle("is-hidden", this.index !== i);
+            });
+            if (this.index === 0) {
+              this.disable(this.previousTarget);
+              this.enable(this.nextTarget);
+            } else if (this.index === (this.totalSlides - 1)) {
+              this.disable(this.nextTarget);
+              this.enable(this.previousTarget);
+            } else {
+              this.enable(this.nextTarget);
+              this.enable(this.previousTarget);
+            }
+          }
+
+          enable(element) {
+            element.removeAttribute("disabled");
+          }
+
+          disable(element) {
+            element.setAttribute("disabled", "disabled");
+          }
+        });
+      })();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -22,7 +82,41 @@
           <h1 class="title">EasyFind.Care</h1>
         </div>
       </div>
-      <div class="columns">
+      <div data-controller="slideshow" data-slideshow-index='0' class="is-hidden-desktop">
+        <div class="columns is-centered">
+          <div data-target="slideshow.slide" class="column">
+            <div class="content has-text-centered">
+              <p>Easily schedule child care</p>
+            </div>
+            <img class="image box" src="/assets/book.png" />
+          </div>
+          <div data-target="slideshow.slide" class="column">
+            <div class="content has-text-centered">
+              <p>Review caregiver credentials before booking</p>
+            </div>
+            <img class="image box" src="/assets/confirm.png" />
+          </div>
+          <div data-target="slideshow.slide" class="column">
+            <div class="content has-text-centered">
+              <p>Review notes from prior sessions</p>
+            </div>
+            <img class="image box" src="/assets/notes.png" />
+          </div>
+          <div data-target="slideshow.slide" class="column">
+            <div class="content has-text-centered">
+              <p>Describe your childs needs</p>
+            </div>
+            <img class="image box" src="/assets/settings.png" />
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered buttons are-medium">
+            <button data-target='slideshow.previous' data-action="slideshow#previous" class="button is-primary is-outlined" disabled=disabled>←</button>
+            <button data-target='slideshow.next' data-action="slideshow#next" class="button is-primary is-outlined">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-hidden">
         <div class="column has-text-centered is-hidden-desktop">
           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS_EYcOOGPqzPstwGKlgtwlZIVvI-05IOEIgy-jdHn23e4EffQ2mTTSI6Vtx2IQfPne0yFaaifluPFT/embed?start=true&loop=true&delayms=3000" frameborder="0" width="254" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
@@ -41,8 +135,10 @@
           <img class="image box" src="/assets/settings.png" />
         </div>
       </div>
-      <div class='has-text-centered'>
-        <a class="button is-large is-success" href="https://forms.gle/9SNPQwqqVq83gtYo6">Sign Up</a>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <a class="button is-large is-primary" href="https://forms.gle/9SNPQwqqVq83gtYo6">Sign Up</a>
+        </div>
       </div>
     </div>
   </body>
