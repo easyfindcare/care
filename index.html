@@ -15,65 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
-    <script charset="utf-8">
-      (() => {
-        const application = Stimulus.Application.start();
-        application.register('slideshow', class extends Stimulus.Controller {
-          static get targets() {
-            return ["next", "previous", "slide"];
-          }
-
-          initialize() {
-            this.showCurrentSlide();
-          }
-
-          get index() {
-            return parseInt(this.data.get('index'));
-          }
-
-          set index(value) {
-            this.data.set("index", value);
-            this.showCurrentSlide();
-          }
-
-          get totalSlides() {
-            return this.slideTargets.length;
-          }
-
-          next() {
-            this.index++;
-          }
-
-          previous() {
-            this.index--;
-          }
-
-          showCurrentSlide() {
-            this.slideTargets.forEach((element, i) => {
-              element.classList.toggle("is-hidden", this.index !== i);
-            });
-            if (this.index === 0) {
-              this.disable(this.previousTarget);
-              this.enable(this.nextTarget);
-            } else if (this.index === (this.totalSlides - 1)) {
-              this.disable(this.nextTarget);
-              this.enable(this.previousTarget);
-            } else {
-              this.enable(this.nextTarget);
-              this.enable(this.previousTarget);
-            }
-          }
-
-          enable(element) {
-            element.removeAttribute("disabled");
-          }
-
-          disable(element) {
-            element.setAttribute("disabled", "disabled");
-          }
-        });
-      })();
-    </script>
+    <script src="/assets/app.js"></script>
   </head>
   <body>
     <div class="container">
