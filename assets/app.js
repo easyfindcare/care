@@ -54,4 +54,11 @@
       element.setAttribute("disabled", "disabled");
     }
   });
+  application.register('register', class extends Stimulus.Controller {
+    onClick(event) {
+      console.log("clicked");
+      event.preventDefault();
+      window.location.href='https://forms.gle/9SNPQwqqVq83gtYo6';
+    }
+  });
 })();
