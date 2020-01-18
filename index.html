@@ -16,11 +16,26 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
     <script src="/assets/app.js"></script>
+    <style type="text/css">
+      .content p:not(:last-child){
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .box{
+        padding: 0.25rem;
+      }
+
+      .content{
+        min-height: 460px;
+      }
+
+    </style>
+
   </head>
   <body>
     <div class="container">
-      <div class="columns">
-        <div class="column has-text-centered">
+      <div class="columns" style="margin-bottom: 0">
+        <div class="column has-text-centered notification">
           <h1 class="title">EasyFind.Care</h1>
         </div>
       </div>
@@ -29,25 +44,25 @@
           <div data-target="slideshow.slide" class="column">
             <div class="box content has-text-centered is-italic">
               <p>Schedule child care on short notice</p>
-              <img class="image is-rounded" src="/assets/book.png" style="max-width: 275px; margin: 0 auto;" />
+              <img class="image is-rounded" src="/assets/book-headerless.png" style="max-width: 275px; margin: 0 auto;" />
             </div>
           </div>
           <div data-target="slideshow.slide" class="column">
             <div class="box content has-text-centered is-italic">
               <p>Review caregiver credentials before booking</p>
-              <img class="image is-rounded" src="/assets/confirm.png" style="max-width: 275px; margin: 0 auto;" />
+              <img class="image is-rounded" src="/assets/confirm-headerless.png" style="max-width: 275px; margin: 0 auto;" />
             </div>
           </div>
           <div data-target="slideshow.slide" class="column">
             <div class="box content has-text-centered is-italic">
               <p>Review notes from prior sessions</p>
-              <img class="image is-rounded" src="/assets/notes.png" style="max-width: 275px; margin: 0 auto;" />
+              <img class="image is-rounded" src="/assets/notes-headerless.png" style="max-width: 275px; margin: 0 auto;" />
             </div>
           </div>
           <div data-target="slideshow.slide" class="column">
             <div class="box content has-text-centered is-italic">
               <p>Describe your childs needs</p>
-              <img class="image is-rounded" src="/assets/settings.png" style="max-width: 275px; margin: 0 auto;" />
+              <img class="image is-rounded" src="/assets/settings-headerless.png" style="max-width: 275px; margin: 0 auto;" />
             </div>
           </div>
           <div data-target="slideshow.slide" class="column">
