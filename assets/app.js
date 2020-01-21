@@ -56,9 +56,15 @@
   });
   application.register('register', class extends Stimulus.Controller {
     onClick(event) {
-      console.log("clicked");
       event.preventDefault();
-      window.location.href='https://forms.gle/9SNPQwqqVq83gtYo6';
+
+      setTimeout(this.redirectToForm, 1000);
+
+      gtag('event', 'signup_form_clicked', { 'event_callback': this.redirectToForm });
+    }
+
+    redirectToForm() {
+      window.location.href = 'https://forms.gle/9SNPQwqqVq83gtYo6';
     }
   });
 })();
